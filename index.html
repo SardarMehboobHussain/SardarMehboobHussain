@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sardar Mehboob Hussain, PhD | Biomedical Engineering</title>
+
+  <!-- Preconnects for performance -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- Bootstrap & icons (only Bootstrap Icons used now) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  <!-- SEO & Social preview -->
+  <meta name="description" content="PhD in Biomedical Engineering specializing in Explainable AI and Deep Learning for Medical Imaging. Researcher in AI transparency, robotic surgery, and healthcare innovation.">
+  <meta name="keywords" content="Explainable AI, Biomedical Engineering, Deep Learning, Medical Imaging, Robotic Surgery">
+  <meta property="og:title" content="Sardar Mehboob Hussain, PhD | Biomedical Engineering">
+  <meta property="og:description" content="Researcher in Explainable AI, Deep Learning for Medical Imaging, and Robotic Surgery.">
+  <meta property="og:image" content="Sardar-min.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico">
+
+  <style>
+    :root{
+      --bg-1: #071021;
+      --bg-2: #0e1720;
+      --accent: #58a6ff;
+      --muted: #ffffff;
+      --text: #e6edf3;
+      --card-bg: rgba(255,255,255,0.03);
+    }
+    html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+    body {
+      margin:0;
+      min-height:100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg,var(--bg-1),var(--bg-2));
+      color:var(--text);
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: rgba(18,20,24,0.72);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.5);
+      padding: 12px 0;
+    }
+    .nav-link {
+      color: var(--text) !important;
+      font-weight:500;
+      margin: 0 8px;
+      font-size: 0.98rem;
+      transition: color 0.25s ease;
+    }
+    .nav-link:hover, .nav-link.active { color: var(--accent) !important; }
+
+    /* dropdown hover on desktop */
+    @media (min-width: 992px) {
+      .dropdown:hover .dropdown-menu { display: block; margin-top:0; }
+    }
+    .dropdown-menu { background: rgba(20,22,28,0.95); border:1px solid rgba(255,255,255,0.04); }
+    .dropdown-item { color: var(--text); }
+    .dropdown-item:hover { color: var(--accent); background: transparent; }
+
+    /* Header */
+    header { text-align:center; padding:120px 20px 40px; position:relative; }
+    .profile-img {
+      width:160px; height:160px; object-fit:cover; border-radius:50%;
+      border:3px solid var(--accent); box-shadow:0 10px 30px rgba(0,0,0,0.6);
+      display:block; margin:-40px auto 20px auto; background:#0b0d10;
+    }
+    header h1 { font-size:2.3rem; margin:6px 0 6px; font-weight:700; }
+    .tagline { color:var(--muted); font-style:italic; margin-bottom:12px; }
+
+    .contact-row { max-width:760px; margin:8px auto 18px; color:var(--muted); font-size:0.95rem; }
+    .contact-row a { color:var(--accent); text-decoration:none; margin:0 8px; }
+    .contact-row a:hover { text-decoration:underline; }
+
+    /* About box */
+    .about-box {
+      max-width:1050px; margin:20px auto; background:var(--card-bg);
+      border:1px solid rgba(255,255,255,0.04); padding:28px; border-radius:12px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.6); text-align:left;
+    }
+    .about-box h3 { color:var(--accent); margin-bottom:8px; }
+    .about-box p { color:var(--text); line-height:1.7; margin:0; }
+
+    /* Sections & cards */
+    section { padding:56px 20px; }
+    .section-title { text-align:center; color:var(--accent); font-size:1.8rem; font-weight:700; margin-bottom:22px; }
+    .card { background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.04); color:var(--muted); border-radius:10px; transition:transform .25s ease, box-shadow .25s ease; }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.6); border-color: rgba(88,166,255,0.18); }
+    .card .card-title { color:var(--accent); font-weight:600; }
+
+    .small-card { padding:18px; }
+
+    footer { padding:26px 0; text-align:center; color:var(--muted); border-top:1px solid rgba(255,255,255,0.03); background:transparent; }
+
+    /* Animations: fade-up */
+    .fade-up { opacity:0; transform: translateY(18px); transition: opacity .8s ease, transform .8s ease; }
+    .fade-up.in-view { opacity:1; transform: translateY(0); }
+
+    /* Icon micro-interactions */
+    .card .bi { transition: transform .18s ease, opacity .18s ease; }
+    .card:hover .bi { transform: translateY(-4px) scale(1.03); opacity: 0.98; }
+    .icon-hover { transition: transform .2s ease; display:inline-block; }
+    .icon-hover:hover { transform: scale(1.12); }
+
+    @media (max-width:576px){
+      header{ padding-top:90px; }
+      .profile-img{ width:120px; height:120px; margin-top:-60px; }
+      .nav-link{ margin:0 6px; font-size:0.92rem; }
+      .about-box{ padding:18px; }
+    }
+    .text-muted {
+      color: #ffffff !important;
+    }
+
+    /* timeline contrast & layout tweaks */
+    .timeline::before { background: rgba(255,255,255,0.10); }
+    .timeline-item { margin: 3rem 0; position: relative; }
+    .timeline-content { width: 45%; margin-left: 55%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .timeline-content:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); }
+
+    @media (max-width: 768px) {
+      .timeline::before { left: 20px; }
+      .timeline-content { width: calc(100% - 40px); margin-left: 40px !important; margin-right: 0 !important; }
+      .timeline-item:nth-child(even) .timeline-content { margin-left: 40px !important; }
+    }
+
+    /* subtle section alternation */
+    section:nth-of-type(odd) { background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent); }
+    .section-title { letter-spacing: 0.6px; }
+
+  </style>
+</head>
+<body id="top">
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand visually-hidden" href="#top">Sardar M. Hussain</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link fw-bold" href="#top"><i class="bi bi-house-door-fill me-1"></i>Home</a></li>
+      </ul>
+
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#employment">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skillset</a></li>
+        <li class="nav-item"><a class="nav-link" href="#recognitions">Recognitions</a></li>
+        <li class="nav-item"><a class="nav-link" href="#talks">Invited Talks</a></li>
+        <li class="nav-item"><a class="nav-link" href="#extra">Extracurricular</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="moreDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreDrop">
+            <li><a class="dropdown-item" href="#contact">Contact</a></li>
+            <li><a class="dropdown-item" href="#news">News & Updates</a></li>
+            <li><a class="dropdown-item" href="#service">Services & Community</a></li>
+            <li><a class="dropdown-item" href="#blog">Blog</a></li>
+            <li><a class="dropdown-item" href="#affiliations">Affiliations</a></li>
+            <li><a class="dropdown-item" href="#references">References</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="Sardar_CV.pdf" download><i class="bi bi-download me-1"></i>Download CV</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <img class="profile-img" src="Sardar-min.jpg" alt="Dr Sardar Mehboob Hussain — portrait" loading="lazy">
+  <h1>Sardar Mehboob Hussain, PhD</h1>
+  <p class="tagline">Biomedical Engineering | Explainable AI | Deep Learning for Medical Imaging | Robotic Surgery</p>
+
+  <div class="contact-row">
+    mehboobhussain.sardar@gmail.com &nbsp; | &nbsp; +44 7405 729354 &nbsp; | &nbsp; sardar@swiss.co.uk
+    <br>
+    <a href="mailto:mehboobhussain.sardar@gmail.com" rel="noopener noreferrer"><i class="bi bi-envelope-fill"></i> Email</a> |
+    <a href="#" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i> LinkedIn</a> |
+    <a href="https://scholar.google.com/citations?user=oq-EEOAAAAAJ" target="_blank" rel="noopener noreferrer"><i class="bi bi-mortarboard-fill"></i> Google Scholar</a> |
+    <a href="#" target="_blank" rel="noopener noreferrer"><i class="bi bi-database"></i> ResearchGate</a>
+  </div>
+
+  <div class="about-box fade-up">
+    <h3>About Me</h3>
+    <p>I am Sardar Mehboob Hussain, a researcher in Biomedical Engineering focusing on Explainable Artificial Intelligence (XAI) and Deep Learning for Medical Imaging. My work bridges AI transparency and healthcare innovation, developing intelligent diagnostic systems and image-guided robotic surgery solutions that enhance clinical decision-making.
+      <br><br>
+      I earned my PhD in Biomedical Engineering from the Polytechnic University of Bari, Italy. I currently work as a Deep Learning Engineer at Comau S.p.A., contributing to AI-based image analysis, model interpretability, and robotic automation. I have authored over 15 research papers and delivered numerous invited talks on XAI and robotic surgery.</p>
+  </div>
+</header>
+
+<!-- Education -->
+<section id="education" class="section-dark fade-up">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-mortarboard-fill text-primary fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">PhD in Biomedical Engineering</h6>
+            <p class="text-muted mb-0">Polytechnic University of Bari, Italy <br> 2019-2023</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-book-fill text-success fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">MS in Computer Science</h6>
+            <p class="text-muted mb-0">COMSATS University Islamabad <br> 2015-2017</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-journal-bookmark-fill text-warning fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">BS in Computer Science</h6>
+            <p class="text-muted mb-0">The University of AJK <br> 2010-2015</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="employment" class="section-darker fade-up">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-motherboard text-primary fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Deep Learning Engineer</h6>
+            <p class="text-muted mb-0">Comau S.p.A., Italy <br> Feb 2023 - Oct 2024</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-person-workspace text-primary fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Teaching Assistant</h6>
+            <p class="text-muted mb-0">Polytechnic University of Bari, Italy <br> Nov 2019 - Feb 2023</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-mortarboard-fill text-success fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Lecturer</h6>
+            <p class="text-muted mb-0">The University of Lahore, Pakistan <br> Oct 2018 - Oct 2019</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-person-badge-fill text-warning fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Junior Lecturer</h6>
+            <p class="text-muted mb-0">University of Kotli, AJK, Pakistan <br> Dec 2017 - Sep 2018</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Publications -->
+<section id="publications" class="section-dark fade-up py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Publications</h2>
+    <div class="pub-grid">
+      <div class="pub-item left"><div class="pub-card"><h5>Visualisation is not explanation! A retrospective study of evaluation of XAI in medical imaging.</h5><p class="text-muted small">Computers in Biology and Medicine, 2024</p></div></div>
+      <div class="pub-item right"><div class="pub-card"><h5>Shape-based breast lesion classification using digital tomosynthesis images: The role of explainable artificial intelligence</h5><p class="text-muted small">Applied Sciences, 2022</p></div></div>
+      <div class="pub-item left"><div class="pub-card"><h5>Deep learning based image processing for robot assisted surgery: A systematic literature survey.</h5><p class="text-muted small">IEEE Access, 2023</p></div></div>
+      <div class="pub-item right"><div class="pub-card"><h5>Shape-based breast lesion classification using digital tomosynthesis images.</h5><p class="text-muted small">Applied Sciences, 2023</p></div></div>
+      <div class="pub-item left"><div class="pub-card"><h5>Inline defective laser weld identification by processing thermal image sequences with machine and deep learning techniques</h5><p class="text-muted small">Applied Sciences, 2022</p></div></div>
+      <div class="pub-item right"><div class="pub-card"><h5>A fusion biopsy framework for prostate cancer based on deformable superellipses and nnU-Net</h5><p class="text-muted small">Bioengineering, 2022</p></div></div>
+      <div class="pub-item left"><div class="pub-card"><h5>Segmentation and Identification of Vertebrae in CT Scans Using CNN, k-Means Clustering and k-NN</h5><p class="text-muted small">Informatics, 2021</p></div></div>
+      <div class="pub-item right"><div class="pub-card"><h5>Explainable deep learning for medical image processing: computer-aided diagnosis and robot-assisted surgery.</h5><p class="text-muted small">Thesis. Politecnico di Bari, 2023</p></div></div>
+      <div class="pub-item left"><div class="pub-card"><h5>Seven pillars to achieve energy efficiency in high-performance computing data centers</h5><p class="text-muted small">Recent Trends and Advances in Wireless and IoT-enabled Networks, 2019</p></div></div>
+      <div class="pub-item right"><div class="pub-card"><h5>Demand side management in nearly zero energy buildings using heuristic optimizations</h5><p class="text-muted small">Energies, 2017</p></div></div>
+    </div>
+    <div class="text-center mt-5">
+      <a href="https://scholar.google.com/citations?user=oq-EEOAAAAAJ" target="_blank" class="btn btn-outline-info">
+        View All on Google Scholar →
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+.pub-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+}
+.pub-item {
+  display: flex;
+  justify-content: flex-start;
+}
+.pub-item.right { justify-content: flex-end; }
+.pub-card {
+  width: 45%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.pub-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.45);
+}
+.pub-card h5 {
+  color: var(--accent);
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 768px) {
+  .pub-card { width: 100%; }
+  .pub-item, .pub-item.right { justify-content: center; }
+}
+</style>
+
+<!-- Skillset -->
+
+<section id="skills" class="section-dark fade-up">
+  <div class="container">
+    <h2 class="section-title">Skillset</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-code-slash text-primary fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Programming</h6>
+            <p class="text-muted mb-0">Python, R, C/C++, MATLAB</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-hdd-stack text-success fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Frameworks & Libraries</h6>
+            <p class="text-muted mb-0">PyTorch, TensorFlow, Keras, NumPy, Scikit-learn, Scipy, Matplotlib, Seaborn</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-tools text-warning fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Tools</h6>
+            <p class="text-muted mb-0">PyCharm, Jupyter Notebook, LaTeX, Visual Studio, Mathematica, SPSS, ITK-Snap, Colab, MS Office Suite</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Recognitions -->
+<section id="recognitions" class="section-dark fade-up">
+  <div class="container">
+    <h2 class="section-title">Recognitions</h2>
+    <div class="row g-4">
+
+      <!-- Recognition 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-award-fill text-primary fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Prime Minister Scholarship</h6>
+            <p class="text dopas-muted mb-0">Bachelor Degree - 2010-2015</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recognition 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-laptop text-success fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">HEC Laptop Scheme</h6>
+            <p class="text-muted mb-0">Outstanding Students - 2014</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recognition 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-trophy-fill text-warning fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Silver Medal</h6>
+            <p class="text-muted mb-0">Bachelor Degree - 2015</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recognition 4 -->
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-cash-stack text-info fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">HEC Merit Scholarship</h6>
+            <p class="text-muted mb-0">Masters - 2015-2017</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recognition 5 -->
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-mortarboard-fill text-danger fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Italian University Scholarship</h6>
+            <p class="text-muted mb-0">PhD - 2019-2023</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recognition 6 -->
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-trophy-fill text-primary fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Hackathon Winner</h6>
+            <p class="text-muted mb-0">TU Delft, The Netherlands - 2023</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Invited Talks -->
+<section id="talks" class="section-dark fade-up">
+  <div class="container">
+    <h2 class="section-title">Invited Talks</h2>
+    <div class="row g-4">
+      
+      <!-- Talk 1 -->
+      <div class="col-md-6">
+        <div class="card h-100 p-4 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <i class="bi bi-mic-fill text-primary fs-1 mb-3 icon-hover"></i>
+            <h5 class="card-title fw-bold">Explainable Deep Learning for Robotic Surgery</h5>
+            <p class="text-muted mb-0">University of Kotli - 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Talk 2 -->
+      <div class="col-md-6">
+        <div class="card h-100 p-4 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <i class="bi bi-mic-fill text-success fs-1 mb-3 icon-hover"></i>
+            <h5 class="card-title fw-bold">Explainable Deep Learning in the context of Medical Imaging</h5>
+            <p class="text-muted mb-0">ComSens Lab, COMSATS - 2023</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Talk 3 -->
+      <div class="col-md-6">
+        <div class="card h-100 p-4 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <i class="bi bi-mic-fill text-warning fs-1 mb-3 icon-hover"></i>
+            <h5 class="card-title fw-bold">Advances in Artificial Intelligence for Breast Cancer</h5>
+            <p class="text-muted mb-0">University of Management & Technology - 2023</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Talk 4 -->
+      <div class="col-md-6">
+        <div class="card h-100 p-4 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <i class="bi bi-mic-fill text-info fs-1 mb-3 icon-hover"></i>
+            <h5 class="card-title fw-bold">Explainable Deep Learning for Robotic Surgery</h5>
+            <p class="text-muted mb-0">The University of Lahore - 2023</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Talk 5 -->
+      <div class="col-md-6">
+        <div class="card h-100 p-4 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <i class="bi bi-mic-fill text-info fs-1 mb-3 icon-hover"></i>
+            <h5 class="card-title fw-bold">Explainable AI for Medical Imaging</h5>
+            <p class="text-muted mb-0">TU Delft, The Ntherlands - 2023</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Extracurricular -->
+<section id="extra" class="section-dark fade-up">
+  <div class="container">
+    <h2 class="section-title">Extracurricular</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-translate text-primary fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Languages</h6>
+            <p class="text-muted mb-0">Urdu, English, Italian, Hindi, Punjabi, Saraiki, Kashmiri</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-book text-success fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Hobbies</h6>
+            <p class="text-muted mb-0">Reading, Traveling, Walking, Hiking, Cooking, Swimming</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-lightbulb text-warning fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Currently Learning</h6>
+            <p class="text-muted mb-0">Storytelling, Chess, Spanish, CBT Techniques</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- News & Updates -->
+<!-- 
+<section id="news" class="section-dark fade-up">
+  <div class="container">
+    <h2 class="section-title">News & Updates</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-newspaper text-primary fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Sample Post 1</h6>
+            <p class="text-muted mb-0">Short update or announcement. Date: 2025</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-newspaper text-success fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Sample Post 2</h6>
+            <p class="text-muted mb-0">Short update or announcement. Date: 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+--> 
+
+<!-- Blog Post: Clean, General, Fits Your Site + Icons at Bottom -->
+<section id="blog" class="section-dark fade-up">
+  <div class="container">
+    <h2 class="section-title">Blog</h2>
+    <div class="row g-4">
+
+      <!-- Main Blog Post -->
+      <div class="col-12 mb-5">
+        <div class="card h-100 p-4 border-0">
+          <div class="card-body">
+
+            <!-- Author & Date -->
+            <div class="d-flex align-items-center mb-4">
+              <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; font-weight: bold;">
+                SM
+              </div>
+              <div>
+                <h6 class="mb-0">Sardar Mehboob Hussain</h6>
+                <p class="text-muted small mb-0">October 12, 2023</p>
+              </div>
+            </div>
+
+            <!-- Title -->
+            <h4 class="card-title fw-bold mb-3">From Code to Clinic: What I Learned Building AI for Real Doctors</h4>
+
+            <!-- Body -->
+            <div class="blog-content text-muted lh-lg">
+              <p>
+                I used to think a <strong>99% accuracy</strong> on a test set was the finish line. Then I showed my model to a radiologist.
+              </p>
+
+              <p>
+                She looked at the output for 10 seconds and said: <em>“Why did it flag this shadow? Is it a mass or just an artifact?”</em>
+              </p>
+
+              <p>
+                That moment changed everything.
+              </p>
+
+              <hr class="my-4">
+
+              <h6 class="fw-bold text-white">1. Accuracy ≠ Trust</h6>
+              <p>
+                In research, we optimize for numbers. In hospitals, doctors optimize for <em>confidence</em>. A model can be right 99 times — but if it fails in a way no human would, it’s useless.
+              </p>
+
+              <h6 class="fw-bold text-white mt-4">2. Explanations Must Speak Medicine, Not Math</h6>
+              <p>
+                Heatmaps are pretty. But a surgeon doesn’t care about pixel gradients. They want to know:
+              </p>
+              <ul>
+                <li>Is this lesion <em>spiculated</em>?</li>
+                <li>Are there <em>microcalcifications</em>?</li>
+                <li>Why is this different from last month’s scan?</li>
+              </ul>
+
+              <h6 class="fw-bold text-white mt-4">3. The Best Models Are Teachers</h6>
+              <p>
+                The future isn’t AI replacing doctors. It’s AI <em>training</em> them. I’ve seen junior residents spot anomalies faster after 10 minutes with an explainable system than after hours of textbooks.
+              </p>
+
+              <hr class="my-4">
+
+              <p>
+                I’m still learning. Every failed deployment, every confused clinician, every “<em>but why?</em>” is data.
+              </p>
+
+              <p>
+                Because in the end, <strong>the model doesn’t need to be perfect</strong> — it needs to be <em>understood</em>.
+              </p>
+
+              <p class="mt-4 fst-italic">
+                Next week: How we turned a robotic arm into a surgical co-pilot using real-time XAI.
+              </p>
+            </div>
+
+            <!-- Icons at the End (Clean & Minimal) -->
+            <div class="d-flex justify-content-center" style="gap: 22rem;">
+              <div class="text-center">
+                <i class="bi bi-shield-check text-success fs-1"></i>
+                <p class="small text-muted mt-1 mb-0">Trust</p>
+              </div>
+              <div class="text-center">
+                <i class="bi bi-diagram-3 text-primary fs-1"></i>
+                <p class="small text-muted mt-1 mb-0">Explain</p>
+              </div>
+              <div class="text-center">
+                <i class="bi bi-chat-dots text-warning fs-1"></i>
+                <p class="small text-muted mt-1 mb-0">Teach</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+<!-- Blog Post: Attractive + 6 Icons in Custom Order -->
+<div class="col-12 mb-5">
+  <div class="card h-100 p-4 border-0 shadow-sm" style="border-radius: 16px;">
+    <div class="card-body">
+
+      <!-- Author & Date -->
+      <div class="d-flex align-items-center mb-4">
+        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; font-weight: bold; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+          SM
+        </div>
+        <div>
+          <h6 class="mb-0 text-white">Sardar Mehboob Hussain</h6>
+          <p class="text-muted small mb-0">November 12, 2024</p>
+        </div>
+      </div>
+
+      <!-- Title -->
+      <h4 class="card-title fw-bold mb-3" style="color: #e3f2fd;">
+        My Work: AI That Doctors Trust
+      </h4>
+
+      <!-- Body -->
+      <div class="blog-content text-muted lh-lg">
+        <p class="lead mb-3" style="font-size: 1.1rem; color: #bbdefb;">
+          I build AI for medical imaging and robotic surgery. The goal isn’t just accuracy — it’s <strong>trust</strong>.
+        </p>
+        <p>
+          As Goodhart’s Law warns: <em>"When a measure becomes a target, it ceases to be a good measure."</em>
+        </p>
+        <p>
+          Doctors need to know <em>why</em> a model flags a tumor or guides a robot’s hand. I use <strong>explainable AI (XAI)</strong> to turn black-box predictions into clear, clinical insights.
+        </p>
+        <p class="mb-0">
+          From breast lesion analysis to real-time surgical support — my work bridges code and care. Because in medicine, <strong>understanding saves lives</strong>.
+        </p>
+      </div>
+
+      <!-- 6 Icons in Custom Order: Clinic → Imaging → Robotics → Metrics → XAI → Impact -->
+      <div class="d-flex justify-content-center mt-5 pt-4 border-top border-secondary" style="gap: 3.5rem;">
+        <!-- 1. Clinic -->
+        <div class="text-center">
+          <div class="bg-success bg-opacity-10 rounded-circle p-3 d-inline-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px;">
+            <i class="bi bi-hospital text-success fs-2"></i>
+          </div>
+          <p class="small text-muted mb-0 fw-semibold">Clinic</p>
+        </div>
+        <!-- 2. Imaging -->
+        <div class="text-center">
+          <div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px;">
+            <i class="bi bi-camera-video text-primary fs-2"></i>
+          </div>
+          <p class="small text-muted mb-0 fw-semibold">Imaging</p>
+        </div>
+        <!-- 3. Robotics -->
+        <div class="text-center">
+          <div class="bg-success bg-opacity-10 rounded-circle p-3 d-inline-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px;">
+            <i class="bi bi-robot text-success fs-2"></i>
+          </div>
+          <p class="small text-muted mb-0 fw-semibold">Robotics</p>
+        </div>
+        <!-- 4. Metrics -->
+        <div class="text-center">
+          <div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px;">
+            <i class="bi bi-speedometer2 text-primary fs-2"></i>
+          </div>
+          <p class="small text-muted mb-0 fw-semibold">Metrics</p>
+        </div>
+        <!-- 5. XAI -->
+        <div class="text-center">
+          <div class="bg-warning bg-opacity-10 rounded-circle p-3 d-inline-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px;">
+            <i class="bi bi-lightbulb text-warning fs-2"></i>
+          </div>
+          <p class="small text-muted mb-0 fw-semibold">XAI</p>
+        </div>
+        <!-- 6. Impact -->
+        <div class="text-center">
+          <div class="bg-warning bg-opacity-10 rounded-circle p-3 d-inline-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px;">
+            <i class="bi bi-arrow-right text-warning fs-2"></i>
+          </div>
+          <p class="small text-muted mb-0 fw-semibold">Impact</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Placeholder Posts -->
+      <div class="col-md-6">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-journal-text text-primary fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Coming Soon</h6>
+            <p class="text-muted mb-0">More thoughts on AI, medicine, and the space between.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-journal-text text-success fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Stay Tuned</h6>
+            <p class="text-muted mb-0">New post every month.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Services & Community -->
+<section id="service" class="section-dark fade-up">
+  <div class="container">
+    <h2 class="section-title">Services & Community</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-file-earmark-check text-primary fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Peer Reviewing</h6>
+            <p class="text-muted mb-0">Reviewer for multiple journals and conferences.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-people text-success fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Outreach & Workshops</h6>
+            <p class="text-muted mb-0">Organized workshops and teaching sessions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Affiliations -->
+
+<!--
+<section id="affiliations" class="section-dark fade-up">
+  <div class="container">
+    <h2 class="section-title">Affiliations</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-building text-primary fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Polytechnic University of Bari</h6>
+            <p class="text-muted mb-0">Italy</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-gear-wide-connected text-success fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Comau S.p.A.</h6>
+            <p class="text-muted mb-0">Industrial Automation Partner</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+-->
+
+<!-- References -->
+
+<!--
+
+<section id="references" class="section-dark fade-up">
+  <div class="container">
+    <h2 class="section-title">References</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-person-badge text-primary fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Prof. Dr V. Bevilacqua</h6>
+            <p class="text-muted mb-0">Polytechnic University of Bari<br><a href="mailto:vitoantonio.bevilacqua@poliba.it" class="text-muted">vitoantonio.bevilacqua@poliba.it</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <i class="bi bi-person-badge text-success fs-2 mb-2 icon-hover"></i>
+            <h6 class="card-title">Prof. Dr S. Zia</h6>
+            <p class="text-muted mb-0">NFC Institute of Engineering Research<br><a href="mailto:sultan@iefr.edu.pk" class="text-muted">sultan@iefr.edu.pk</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+-->
+
+<!-- Contact -->
+<section id="contact" class="section-dark fade-up">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <div class="row g-4">
+      <!-- Get in Touch -->
+      <div class="col-md-6">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <h6 class="card-title d-flex align-items-center justify-content-center mb-3">
+              <i class="bi bi-envelope-fill text-primary fs-2 me-2"></i>
+              Get in Touch
+            </h6>
+            <p class="text-muted mb-1"><a href="mailto:mehboobhussain.sardar@gmail.com" class="text-muted" rel="noopener noreferrer">mehboobhussain.sardar@gmail.com</a></p>
+            <p class="text-muted mb-1">sardarmehboob.hussain@poliba.it</p>
+            <p class="text-muted mb-1">sardarmehboob.hussain@mypec.eu</p>
+            <p class="text-muted mb-1">sardar@swiss.co.uk</p>
+            <p class="text-muted mb-1">+44 7405 729354</p>
+            <a href="Sardar_CV.pdf" download class="btn btn-outline-primary btn-sm">
+              <i class="bi bi-download me-1"></i> Download CV
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social & Scholar -->
+      <div class="col-md-6">
+        <div class="card h-100 p-3">
+          <div class="card-body text-center">
+            <h6 class="card-title d-flex align-items-center justify-content-center mb-3">
+              <i class="bi bi-share-fill text-success fs-2 me-2"></i>
+              Social & Scholar
+            </h6>
+            <p class="mb-1"><i class="bi bi-linkedin text-primary me-2"></i> <a href="#" style="color:var(--accent); text-decoration:none;" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+            <p class="mb-1"><i class="bi bi-mortarboard-fill text-info me-2"></i> <a href="https://scholar.google.com/citations?user=oq-EEOAAAAAJ" style="color:var(--accent); text-decoration:none;" target="_blank" rel="noopener noreferrer">Google Scholar</a></p>
+            <p class="mb-0"><i class="bi bi-database text-warning me-2"></i> <a href="#" style="color:var(--accent); text-decoration:none;" target="_blank" rel="noopener noreferrer">ResearchGate</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container text-center py-3">
+    <p class="mb-1">© 2025 Dr. Sardar Mehboob Hussain — All rights reserved</p>
+    <p class="text-muted small">Made with ❤️ by Dr. Sardar Mehboob Hussain</p>
+  </div>
+</footer>
+
+
+<!-- Back to top button -->
+<button id="backToTop" class="btn btn-outline-light position-fixed" style="bottom:18px; right:18px; z-index:1050; display:none;" aria-label="Back to top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// Active nav highlighting (requestAnimationFrame)
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+const homeLink = document.querySelector('.nav-link.fw-bold');
+
+function updateActive() {
+  let current = null;
+  sections.forEach(s => {
+    const rect = s.getBoundingClientRect();
+    if (rect.top <= 120 && rect.bottom >= 120) current = s.id;
+  });
+  navLinks.forEach(l => l.classList.remove('active'));
+  if (window.scrollY < 200 && homeLink) homeLink.classList.add('active');
+  else if (current) {
+    const a = document.querySelector('.nav-link[href="#' + current + '"]');
+    if (a) a.classList.add('active');
+  }
+}
+let rafId = null;
+window.addEventListener('scroll', () => {
+  if (rafId) cancelAnimationFrame(rafId);
+  rafId = requestAnimationFrame(updateActive);
+});
+document.addEventListener('DOMContentLoaded', updateActive);
+
+// Fade-in on scroll - unified
+const fadeEls = document.querySelectorAll('.fade-up');
+const fadeIo = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('in-view');
+  });
+}, { threshold: 0.12 });
+
+fadeEls.forEach(el => fadeIo.observe(el));
+
+// Close navbar on mobile after click
+document.querySelectorAll('.nav-link').forEach(link=>{
+  link.addEventListener('click', ()=> {
+    const bsCollapse = document.querySelector('.navbar-collapse');
+    if (bsCollapse && bsCollapse.classList.contains('show')) {
+      new bootstrap.Collapse(bsCollapse).hide();
+    }
+  });
+});
+
+// Make dropdown open on hover for desktop (and still work on click via bootstrap)
+document.querySelectorAll('.dropdown').forEach(dd=>{
+  dd.addEventListener('mouseenter', ()=>{ if(window.innerWidth>=992) dd.classList.add('show'); });
+  dd.addEventListener('mouseleave', ()=>{ if(window.innerWidth>=992) dd.classList.remove('show'); });
+});
+
+// Back to top button behaviour
+const btt = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 600) btt.style.display = 'block';
+  else btt.style.display = 'none';
+});
+btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+
+
+</script>
+<style>
+/* Tweak title size for Invited Talks only */
+#talks .card-title {
+  font-size: 1.00rem;
+  line-height: 1.4;
+}
+
+</style>
+
+
+</body>
+</html>
